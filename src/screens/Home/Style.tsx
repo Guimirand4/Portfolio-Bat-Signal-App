@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center', 
     alignItems: 'center',     
     backgroundColor: '#fff',
-    marginBottom: 150,
+    color: '#000',
     
   },
   logo: {

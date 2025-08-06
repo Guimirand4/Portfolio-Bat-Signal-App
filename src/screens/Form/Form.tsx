@@ -1,14 +1,14 @@
 import React from 'react';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../routes/types';
-import { View, Text, TextInput, Image } from 'react-native';
+import { View, Text, TextInput, Image, Pressable } from 'react-native';
 import { styles,  } from './FormStyle';
 
 type HomeScreenProps = {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
 };
 
-export function Form() {
+export function Form({ navigation }: HomeScreenProps) {
   return (
     <View style={styles.container}>
         <View style={styles.formfield}>
@@ -31,7 +31,10 @@ export function Form() {
           <Text style={styles.botaoEnviar}>Enviar Sinal ao Batman</Text>
         </View>
         <View style={styles.caixaBotaoVoltar}>
-          <Text style={styles.botaoEnviar}>Voltar</Text>
+          <Pressable onPress={() => navigation.navigate('Home')}>
+             <Text style={styles.botaoEnviar}>Voltar</Text>
+          </Pressable>
+         
         </View>
     </View>
   );

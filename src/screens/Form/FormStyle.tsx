@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 16,
-    backgroundColor: 'grey',
+    backgroundColor: '#fff',
   },
   texto:{
     fontSize: 17,
@@ -42,5 +42,12 @@ export const styles = StyleSheet.create({
   caixaBotaoVoltar: {
     marginTop: -10,
     alignItems: 'center',
+  },
+  Imagem:{
+    width: 150,
+    height: 150,
+    alignSelf: 'center',
+    marginBottom: -10,
+
   }
 });

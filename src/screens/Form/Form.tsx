@@ -28,7 +28,7 @@ export function Form({ navigation }: HomeScreenProps) {
             <TextInput style={styles.obervation}></TextInput>
         </View>
         <View style={styles.caixaBotaoEnviar}>
-          <Text style={styles.botaoEnviar}>Enviar Sinal ao Batman</Text>
+          <Text style={styles.botaoEnviar}>Enviar BatSinal</Text>
         </View>
         <View style={styles.caixaBotaoVoltar}>
           <Pressable onPress={() => navigation.navigate('Home')}>

@@ -1,13 +1,23 @@
 import React from 'react';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../routes/types';
-import { View, Text, TextInput, Image, Pressable } from 'react-native';
+import { View, Text, TextInput, Image, Pressable, Alert } from 'react-native';
 import { styles,  } from './FormStyle';
 import batSinal from "../../../assets/bat-sinal.png";
 
 type HomeScreenProps = {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
 };
+
+const handlePress = () => {
+    Alert.alert(
+      'Bat sinal enviado ⚠️🦇',
+      'O Batman está indo te ajudar!',
+      [
+        { text: 'OK', onPress: () => console.log('') }
+      ]
+    );
+  }
 
 export function Form({ navigation }: HomeScreenProps) {
   return (
@@ -32,7 +42,13 @@ export function Form({ navigation }: HomeScreenProps) {
             <TextInput style={styles.obervation}></TextInput>
         </View>
         <View style={styles.caixaBotaoEnviar}>
-          <Text style={styles.botaoEnviar}>Enviar Bat Sinal</Text>
+        
+            <Text style={styles.botaoEnviar}
+              onPress={handlePress}
+              onPressOut={() => navigation.navigate('Home')}>
+              Enviar Bat Sinal
+              </Text>
+           
         </View>
         <View style={styles.caixaBotaoVoltar}>
           <Pressable onPress={() => navigation.navigate('Home')}>

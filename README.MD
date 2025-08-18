@@ -40,14 +40,6 @@ All in a smooth and intuitive interface — just in case Gotham needs saving. �
 
 ---
 
-## 🚧 Roadmap Ideas
-
-- 🌐 Integration with real-time geolocation
-- ✉️ Backend integration to store or forward signals
-- 🦸 Batman’s response system (just maybe...)
-
----
-
 <p align="center">
   Developed in the shadows by <strong>Guilherme Miranda</strong> 🦇
 </p>
